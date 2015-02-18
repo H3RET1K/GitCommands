@@ -1,7 +1,10 @@
 
 Creating a Repo
+git init
 
 Commiting
+git add -A .
+git commit -m "message"
 
 Branching
 
@@ -11,4 +14,4 @@ Push/Pull
 
 Some Links:
 http://www.git-tower.com/learn/ebook/command-line/appendix/command-line-101
-
+X
