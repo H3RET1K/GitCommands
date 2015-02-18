@@ -1,7 +1,10 @@
 
 Creating a Repo
+git init
 
 Commiting
+git add -A .
+git commit -m "message"
 
 Branching
 
