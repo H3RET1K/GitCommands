@@ -1,0 +1,14 @@
+
+Creating a Repo
+
+Commiting
+
+Branching
+
+Merging
+
+Push/Pull
+
+Some Links:
+http://www.git-tower.com/learn/ebook/command-line/appendix/command-line-101
+
