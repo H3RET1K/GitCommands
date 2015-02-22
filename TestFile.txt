@@ -1,0 +1,10 @@
+git clone https://github.com/bently0602/GitCommands.git
+cd "GitCommands"
+git branch GitCommands_RM
+git checkout GitCommands_RM
+<updated git-cheat-sheet.txt with old version>
+git add .
+git commit -m "1-Updated Old File"
+<added new file TestFile.txt>
+git add .
+git commit -m "2-Added TestFile.txt>

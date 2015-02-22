@@ -1,17 +1,31 @@
-
 Creating a Repo
-git init
+git init "NewDir"
 
 Commiting
 git add -A .
-git commit -m "message"
+git commit -m "What does the -A do? In most examples they did not use it!"
 
 Branching
+git branch TestFile.txt
+git branch -v
+
 
 Merging
+git checkout master
+git merge TestFile.txt
+git log
 
-Push/Pull
+Remote Push
+git remote add origin https://github.com/H3RET1K/TestRepository.git
+git remote -v
+git push -u origin master
+git push -u origin TestFile.txt
+
+Pull
+git remote add origin https://github.com/bently0602/gitr.git\
+git fetch
 
 Some Links:
 http://www.git-tower.com/learn/ebook/command-line/appendix/command-line-101
-X
+https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
+
