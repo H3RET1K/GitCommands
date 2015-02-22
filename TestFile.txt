@@ -8,4 +8,5 @@ git checkout GitCommands_RM
 <updated git-cheat-sheet.txt with old version added new txt file>
 git add .
 git commit -m "1-updated with new files"
-
+git push origin 
+git push origin GitCommands_RM
