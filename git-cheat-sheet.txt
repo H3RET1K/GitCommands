@@ -1,31 +1,57 @@
-Creating a Repo
-git init "NewDir"
+git clone https://github.com/H3RET1K/GitCommands.git
+--clone existing repository from GitHub account to local
+--this will automatically set the origin to my Github repository
 
-Commiting
-git add -A .
-git commit -m "What does the -A do? In most examples they did not use it!"
+git remote add origin https://github.com/H3RET1K/GitCommands.git
+--I would only need to use this if I had not cloned initially
+--Adding the origin will allow me to upload my repository to my GitHub account
 
-Branching
-git branch TestFile.txt
-git branch -v
-
-
-Merging
-git checkout master
-git merge TestFile.txt
-git log
-
-Remote Push
-git remote add origin https://github.com/H3RET1K/TestRepository.git
 git remote -v
-git push -u origin master
-git push -u origin TestFile.txt
+--I can use this to check my origin/upstream and what URL they point to
 
-Pull
-git remote add origin https://github.com/bently0602/gitr.git\
-git fetch
+cd "GitCommands"
+--change directory into newly cloned repository
 
-Some Links:
-http://www.git-tower.com/learn/ebook/command-line/appendix/command-line-101
-https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
+git branch GitCommands_RM
+--create a new branch of the GitCommands repository for editing called "GitCommands_RM"
+--working from the master is not recommended
 
+git remote add upstream https://github.com/bently0602/GitCommands.git
+--add a remote connection to Vince's GitHub repository called "upstream"
+
+git checkout master
+--check out the master branch of the GitCommands repository
+--checking out a branch makes it the active branch
+--this will only display files/changes that are committed to that particular branch
+
+git rebase upstream/master
+--rebase will merge the contents of another branch with the specified branch
+--this will merge Vince's branch of "GitCommands" with my master branch of the repository
+
+git checkout GitCommands_RM
+--check out my GitCommands_RM branch of the repository
+
+<Added new file, updated the git-cheat-sheet.txt>
+
+git add .
+--this will stage all files in the current branch for commit
+--if only a single file is to be added, substitute the period with filename
+
+git commit -m "1-updated with new files"
+--commit will make the changes that are staged to the repository active
+--the -m will specify the comment appended to the commit action
+
+git checkout master
+--check out the master branch of the repository
+
+git merge GitCommands_RM
+--since my changes were made only in the GitCommands_RM branch I will merge with the master
+--merge is non-destructive and will simply incorporate my changes into master
+
+git push
+--this will upload my currently checked out master branch to my GitHub
+--there is no need to specify the origin, since it is defaulted from the initial clone
+
+git push GitCommands_RM
+--a standard git push will only upload the checked out branch
+--I want to also push my GitCommands_RM branch to GitHub as well
